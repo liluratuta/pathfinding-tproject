@@ -24,7 +24,7 @@ namespace TestProject.GameField
                 (from - to).sqrMagnitude <= 1;
 
             bool IsPossibleMoveHeight() => 
-                Mathf.Abs(GetHeight(from) - GetHeight(to)) <= 1;
+                GetHeight(from) - GetHeight(to) >= -1;
         }
 
         public float DistanceBetween(Vector2Int from, Vector2Int to) => 
